@@ -12,8 +12,7 @@ public class CalculadoraApplication extends Application {
         FXMLLoader loader = new FXMLLoader(
                 getClass().getResource("/com/calculadora/ui/view/calculadora.fxml")
         );
-
-        Scene scene = new Scene(loader.load());
+        Scene scene = new Scene(loader.load(),320,500);
         stage.setTitle("Calculadora");
         stage.setScene(scene);
         stage.show();
