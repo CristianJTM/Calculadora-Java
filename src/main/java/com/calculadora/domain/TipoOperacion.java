@@ -2,27 +2,26 @@ package com.calculadora.domain;
 
 public enum TipoOperacion {
 
-    SUMA("+"),
-    RESTA("-"),
-    MULTIPLICACION("*"),
-    DIVISION("/");
+    SUMA('+'),
+    RESTA('-'),
+    MULTIPLICACION('*'),
+    DIVISION('/');
+    private final char simbolo;
 
-    private final String simbolo;
-
-    TipoOperacion(String simbolo) {
+    TipoOperacion(char simbolo) {
         this.simbolo = simbolo;
     }
 
-    public String getSimbolo() {
+    public char getSimbolo() {
         return simbolo;
     }
 
-    public static TipoOperacion fromSimbolo(String simbolo) {
-        for (TipoOperacion tipo : values()) {
-            if (tipo.simbolo.equals(simbolo)) {
-                return tipo;
+    public static TipoOperacion fromSimbolo(char simbolo) {
+        for (TipoOperacion op : values()) {
+            if (op.simbolo == simbolo) {
+                return op;
             }
         }
-        throw new IllegalArgumentException("Operación no soportada: " + simbolo);
+        throw new IllegalArgumentException("Operador no soportado: " + simbolo);
     }
 }
