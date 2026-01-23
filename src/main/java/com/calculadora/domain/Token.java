@@ -22,6 +22,22 @@ public class Token {
         return token;
     }
 
+    public boolean esOperador() {
+        return tipo == TipoToken.OPERADOR;
+    }
+
+    public boolean esMultiplicacionODivision() {
+        return tipo == TipoToken.OPERADOR &&
+                (tipoOperacion == TipoOperacion.MULTIPLICACION ||
+                        tipoOperacion == TipoOperacion.DIVISION);
+    }
+
+    public boolean esSumasORestas() {
+        return tipo == TipoToken.OPERADOR &&
+                (tipoOperacion == TipoOperacion.SUMA ||
+                        tipoOperacion == TipoOperacion.RESTA);
+    }
+
     public TipoToken getTipo() {
         return tipo;
     }
@@ -33,4 +49,6 @@ public class Token {
     public TipoOperacion getTipoOperacion() {
         return tipoOperacion;
     }
+
+
 }

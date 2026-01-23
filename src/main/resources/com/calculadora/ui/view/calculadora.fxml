@@ -28,23 +28,27 @@
             <RowConstraints vgrow="ALWAYS"></RowConstraints>
             <RowConstraints vgrow="ALWAYS"></RowConstraints>
             <RowConstraints vgrow="ALWAYS"></RowConstraints>
+            <RowConstraints vgrow="ALWAYS"></RowConstraints>
         </rowConstraints>
-
-        <Button GridPane.rowIndex="0" GridPane.columnIndex="0" text="7" maxWidth="Infinity" maxHeight="Infinity" fx:id="btn7" onAction="#onBtnPressed"/>
-        <Button GridPane.rowIndex="0" GridPane.columnIndex="1" text="8" maxWidth="Infinity" maxHeight="Infinity" fx:id="btn8" onAction="#onBtnPressed"/>
-        <Button GridPane.rowIndex="0" GridPane.columnIndex="2" text="9" maxWidth="Infinity" maxHeight="Infinity" fx:id="btn9" onAction="#onBtnPressed"/>
-        <Button GridPane.rowIndex="0" GridPane.columnIndex="3" text="/" maxWidth="Infinity" maxHeight="Infinity" fx:id="btnDivision" onAction="#onBtnPressed"/>
-        <Button GridPane.rowIndex="1" GridPane.columnIndex="0" text="4" maxWidth="Infinity" maxHeight="Infinity" fx:id="btn4" onAction="#onBtnPressed"/>
-        <Button GridPane.rowIndex="1" GridPane.columnIndex="1" text="5" maxWidth="Infinity" maxHeight="Infinity" fx:id="btn5" onAction="#onBtnPressed"/>
-        <Button GridPane.rowIndex="1" GridPane.columnIndex="2" text="6" maxWidth="Infinity" maxHeight="Infinity" fx:id="btn6" onAction="#onBtnPressed"/>
-        <Button GridPane.rowIndex="1" GridPane.columnIndex="3" text="*" maxWidth="Infinity" maxHeight="Infinity" fx:id="btnMultiplicacion" onAction="#onBtnPressed"/>
-        <Button GridPane.rowIndex="2" GridPane.columnIndex="0" text="1" maxWidth="Infinity" maxHeight="Infinity" fx:id="btn1" onAction="#onBtnPressed"/>
-        <Button GridPane.rowIndex="2" GridPane.columnIndex="1" text="2" maxWidth="Infinity" maxHeight="Infinity" fx:id="btn2" onAction="#onBtnPressed"/>
-        <Button GridPane.rowIndex="2" GridPane.columnIndex="2" text="3" maxWidth="Infinity" maxHeight="Infinity" fx:id="btn3" onAction="#onBtnPressed"/>
-        <Button GridPane.rowIndex="2" GridPane.columnIndex="3" text="-" maxWidth="Infinity" maxHeight="Infinity" fx:id="btnResta" onAction="#onBtnPressed"/>
-        <Button GridPane.rowIndex="3" GridPane.columnIndex="0" text="0" maxWidth="Infinity" maxHeight="Infinity" fx:id="btn0" onAction="#onBtnPressed"/>
-        <Button GridPane.rowIndex="3" GridPane.columnIndex="1" text="." maxWidth="Infinity" maxHeight="Infinity" fx:id="btnPunto" onAction="#onBtnPressed"/>
-        <Button GridPane.rowIndex="3" GridPane.columnIndex="2" text="=" maxWidth="Infinity" maxHeight="Infinity" fx:id="btnIgual" onAction="#onBtnPressed"/>
-        <Button GridPane.rowIndex="3" GridPane.columnIndex="3" text="+" maxWidth="Infinity" maxHeight="Infinity" fx:id="btnSuma" onAction="#onBtnPressed"/>
+        <Button GridPane.rowIndex="0" GridPane.columnIndex="0" text="CE" maxWidth="Infinity" maxHeight="Infinity" fx:id="btnCE" onAction="#onBtnPressed"/>
+        <Button GridPane.rowIndex="0" GridPane.columnIndex="1" text="C" maxWidth="Infinity" maxHeight="Infinity" fx:id="btnC" onAction="#onBtnPressed"/>
+        <Button GridPane.rowIndex="0" GridPane.columnIndex="2" text="⇦" maxWidth="Infinity" maxHeight="Infinity" fx:id="btnBorrar" onAction="#onBtnPressed"/>
+        <Button GridPane.rowIndex="0" GridPane.columnIndex="3" text="⇦" maxWidth="Infinity" maxHeight="Infinity" fx:id="btnExtra" onAction="#onBtnPressed"/>
+        <Button GridPane.rowIndex="1" GridPane.columnIndex="0" text="7" maxWidth="Infinity" maxHeight="Infinity" fx:id="btn7" onAction="#onBtnPressed"/>
+        <Button GridPane.rowIndex="1" GridPane.columnIndex="1" text="8" maxWidth="Infinity" maxHeight="Infinity" fx:id="btn8" onAction="#onBtnPressed"/>
+        <Button GridPane.rowIndex="1" GridPane.columnIndex="2" text="9" maxWidth="Infinity" maxHeight="Infinity" fx:id="btn9" onAction="#onBtnPressed"/>
+        <Button GridPane.rowIndex="1" GridPane.columnIndex="3" text="/" maxWidth="Infinity" maxHeight="Infinity" fx:id="btnDivision" onAction="#onBtnPressed"/>
+        <Button GridPane.rowIndex="2" GridPane.columnIndex="0" text="4" maxWidth="Infinity" maxHeight="Infinity" fx:id="btn4" onAction="#onBtnPressed"/>
+        <Button GridPane.rowIndex="2" GridPane.columnIndex="1" text="5" maxWidth="Infinity" maxHeight="Infinity" fx:id="btn5" onAction="#onBtnPressed"/>
+        <Button GridPane.rowIndex="2" GridPane.columnIndex="2" text="6" maxWidth="Infinity" maxHeight="Infinity" fx:id="btn6" onAction="#onBtnPressed"/>
+        <Button GridPane.rowIndex="2" GridPane.columnIndex="3" text="*" maxWidth="Infinity" maxHeight="Infinity" fx:id="btnMultiplicacion" onAction="#onBtnPressed"/>
+        <Button GridPane.rowIndex="3" GridPane.columnIndex="0" text="1" maxWidth="Infinity" maxHeight="Infinity" fx:id="btn1" onAction="#onBtnPressed"/>
+        <Button GridPane.rowIndex="3" GridPane.columnIndex="1" text="2" maxWidth="Infinity" maxHeight="Infinity" fx:id="btn2" onAction="#onBtnPressed"/>
+        <Button GridPane.rowIndex="3" GridPane.columnIndex="2" text="3" maxWidth="Infinity" maxHeight="Infinity" fx:id="btn3" onAction="#onBtnPressed"/>
+        <Button GridPane.rowIndex="3" GridPane.columnIndex="3" text="-" maxWidth="Infinity" maxHeight="Infinity" fx:id="btnResta" onAction="#onBtnPressed"/>
+        <Button GridPane.rowIndex="4" GridPane.columnIndex="0" text="0" maxWidth="Infinity" maxHeight="Infinity" fx:id="btn0" onAction="#onBtnPressed"/>
+        <Button GridPane.rowIndex="4" GridPane.columnIndex="1" text="." maxWidth="Infinity" maxHeight="Infinity" fx:id="btnPunto" onAction="#onBtnPressed"/>
+        <Button GridPane.rowIndex="4" GridPane.columnIndex="2" text="=" maxWidth="Infinity" maxHeight="Infinity" fx:id="btnIgual" onAction="#onBtnPressed"/>
+        <Button GridPane.rowIndex="4" GridPane.columnIndex="3" text="+" maxWidth="Infinity" maxHeight="Infinity" fx:id="btnSuma" onAction="#onBtnPressed"/>
     </GridPane>
 </VBox>

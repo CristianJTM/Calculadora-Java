@@ -24,6 +24,10 @@ public class Expresion {
                 numeroActual.append(c);
                 continue;
             }
+            if (c == '-') {
+                numeroActual.append(c);
+                continue;
+            }
 
             // Operador
             if (esOperador(c)) {

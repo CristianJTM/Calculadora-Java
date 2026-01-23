@@ -6,10 +6,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import java.util.Objects;
 import com.calculadora.domain.Expresion;
+import com.calculadora.service.CalculadoraService;
+import com.calculadora.domain.Resultado;
 
 public class CalculadoraController {
     @FXML
     private TextField display;
+
+    private CalculadoraService calculadoraService = new CalculadoraService();
+
 
     @FXML
     private void onBtnPressed(ActionEvent event) {
@@ -17,24 +22,42 @@ public class CalculadoraController {
 
         if(Objects.equals(display.getText(),"0") && btn.getText().matches("[+*/]")){
             return;
-        }else if(Objects.equals(display.getText(),"0") && btn.getText().matches("-")){
+        }
+        if(Objects.equals(display.getText(),"0") && btn.getText().matches("-")){
             display.setText(btn.getText());
-        }else if(Objects.equals(display.getText(),"-") && btn.getText().matches("[+]")) {
+        }
+        if(Objects.equals(display.getText(),"-") && btn.getText().matches("[+]")) {
             display.setText("0");
             return;
-        } else if (Objects.equals(display.getText(),"-") && btn.getText().matches("[*/]")) {
+        }
+        if (Objects.equals(display.getText(),"-") && btn.getText().matches("[*/]")) {
+            return;
+        }
+        if (display.getText().substring(display.getText().length() - 1).matches("[+*/]") && btn.getText().matches("-")) {
+            display.setText(display.getText() + btn.getText());
+        }
+        if (display.getText().length() >= 2 &&
+                (display.getText().endsWith("+-")
+                        || display.getText().endsWith("*-")
+                        || display.getText().endsWith("/-")) &&
+                btn.getText().matches("[+\\-*/]")) {
             return;
         }
         esNumero(btn);
         esOperador(btn);
         puedeAgregarPunto(btn);
+        esLimpiador(btn);
 
         if(btn.getText().matches("=")){
 
-            //Metodo que hace las operaciones.
-            //Por el momento se limpia el display
+            String textoExpresion = display.getText();
 
-            display.setText("0");
+            Expresion expresion = new Expresion(textoExpresion);
+
+            Resultado resultado = calculadoraService.calcular(expresion);
+
+            display.setText(resultado.comoTexto());
+
         }
     }
 
@@ -47,6 +70,12 @@ public class CalculadoraController {
             }
         }
     }
+    private void esLimpiador(Button btn){
+        if(btn.getText().matches("C")){
+            display.setText("0");
+        }
+    }
+
     private void esOperador(Button btn){
         if(btn.getText().matches("[+\\-*/]")){
             if(display.getText().substring(display.getText().length() - 1).matches("[+\\-*/]")){
